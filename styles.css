@@ -1,0 +1,269 @@
+@font-face{
+    font-family:Hanken Grotesk;
+    src:url('HankenGrotesk-VariableFont_wght.ttf')
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    font-family:Hanken Grotesk,sans-serif;
+    margin:0;
+    padding:0;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+
+
+.container {
+    width:100vw;
+    max-width: 440px;
+    font-size: 18px;
+
+}
+
+.result-comment {
+    border: 1px solid blueviolet;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-image: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+    color:white;
+}
+
+.top-heading {
+    font-size: 1em;
+    margin-top: 1.4em;
+    font-weight: 400;
+}
+
+.great {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.comment {
+    margin: 1em auto;
+    width:60%;
+    font-size: 0.9rem;
+    text-align: left;
+    margin-bottom: 1.5em;
+    font-weight: 400;
+    color:hsl(241, 100%, 89%);
+}
+
+.circle {
+    width: 140px;
+    border-radius: 55%;
+    margin: 1em auto;
+    padding: 1.5em 0em;
+    background-image: linear-gradient(hsla(241, 72%, 46%, 0.7) 20%,hsla(256, 72%, 46%, 0.06));
+}
+.circle p{
+    font-weight: 400;
+    font-size: 0.8em;
+    color: hsl(241, 100%, 89%);
+}
+.summary{
+    font-size:1.2em;
+    margin-left:1.5em;
+    font-weight: 600;
+}
+.result-details-list {
+    list-style: none;
+}
+li{
+    margin-bottom:0.8em;
+    display: flex;
+    width:90%;
+    justify-content: space-between;
+    padding:0.6em 0.9em;
+    border-radius: 10px;
+    font-size:0.95em;
+}
+.reaction{
+    background-color:  hsla(0, 100%, 67%,0.1);
+}
+.memory{
+    background-color:  hsla(39, 100%, 56%,0.1);
+}
+.verbal{
+   
+    background-color: hsla(166, 100%, 37%,0.1);
+}
+.visual{
+    background-color:  hsla(0, 100%, 67%,0.1);
+}
+.reaction:nth-child(1) span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.memory:nth-child(2) span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.verbal:nth-child(3) span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.visual:nth-child(4) span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text{
+    margin-left:0.4em;
+}
+.red-text{
+    color:hsl(0, 100%, 67%);
+}
+.yellow-text{
+    color: hsl(39, 100%, 56%);
+}
+.green-text{
+    color:hsl(166, 100%, 37%);
+}
+.blue-text{
+    color:hsl(234, 85%, 45%);
+}
+.hundred{
+    color: hsl(222, 13%, 45%);
+   
+}
+button {
+    display: block;
+    width:80%;
+    margin:auto;
+    padding:0.7em 5em;
+    border-radius: 50px;
+    border:none;
+    color:white;
+    background-color: hsl(224, 30%, 27%);
+    margin-top:25px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+@media (min-width:450px){
+    body {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width:600px;
+        border-radius: 20px;
+        
+    }
+    .result-comment{
+        width:50%;
+        border-radius: 20px;
+    }
+    .comment{
+        width: 65%;
+        text-align: center;
+    }
+    .result-details{
+        width:50%;
+    }
+    button:active{
+        cursor:pointer;
+        background-image: linear-gradient(180deg,hsla(256, 72%, 46%, 1) 65%,hsla(241, 72%, 46%, 0));
+    }
+}
